@@ -6,10 +6,12 @@
 }
 
 .header-container h2{
-    color: #3a4895;
+   color: var(--primary-color);
+   font-weight: 700;
+   font-size: 24px;
 }
 
 .cart-item{
-    color: #3a4895; 
+   color: var(--primary-color); 
     font-size: 1.5rem;
 }

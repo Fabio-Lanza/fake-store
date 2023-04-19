@@ -1,0 +1,21 @@
+.footer{
+    height: 66px;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+}
+
+.footer p{
+    color: #fcfcfc;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.footer a{
+    color: #fcfcfc;
+    font-size: 15px;
+    font-weight: 400;
+    text-decoration: none;
+}

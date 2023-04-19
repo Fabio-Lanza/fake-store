@@ -1,0 +1,15 @@
+.home-container{
+    min-height: 100vh;
+    display: flex;
+   
+}
+
+.products-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 76px;
+    padding: 20px 130px;
+    justify-content: space-between;
+    
+}
