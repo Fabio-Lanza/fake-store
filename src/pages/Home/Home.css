@@ -1,6 +1,8 @@
 .home-container{
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
+    padding: 20px 130px;
    
 }
 
@@ -9,7 +11,13 @@
     display: flex;
     flex-wrap: wrap;
     gap: 76px;
-    padding: 20px 130px;
+   
     justify-content: space-between;
     
+}
+
+.category-container{
+    width: 100%;
+    margin: 40px 0;
+   
 }
