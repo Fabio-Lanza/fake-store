@@ -6,6 +6,7 @@ import Category from "../../component/Category/Category";
 
 function Home() {
   const [products, setProducts] = useState([]);
+ 
 
   useEffect(() => {
     axios.get("https://fakestoreapi.com/products").then((res) => {
