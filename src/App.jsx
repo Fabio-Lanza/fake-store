@@ -16,7 +16,6 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/details/:productId" element={<ProductDetails />} />
         </Routes>
-        
         <Footer />
       </BrowserRouter>
     </div>
@@ -24,3 +23,4 @@ function App() {
 }
 
 export default App;
+ 
