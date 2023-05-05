@@ -5,8 +5,11 @@ import Footer from "./component/Footer/Footer";
 import Contact from "./pages/Contact/Contact";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ProductDetails from "./pages/ProductDetails/ProductDetails";
+import Cart from "./pages/Cart/Cart";
 
 function App() {
+
+
   return (
     <div className="App">
       <BrowserRouter>
@@ -14,7 +17,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/cart" element={<Cart />} />
           <Route path="/details/:productId" element={<ProductDetails />} />
+
         </Routes>
         <Footer />
       </BrowserRouter>

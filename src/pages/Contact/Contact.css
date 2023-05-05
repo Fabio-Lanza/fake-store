@@ -66,3 +66,19 @@
   border: none;
   cursor: pointer;
 }
+
+
+@media screen and (max-width: 850px){
+  .form-box {
+    width: 588px;
+    height: 783px;
+  }
+}
+
+
+@media screen and (max-width: 480px){
+  .form-box {
+    width: 344px;
+    height: 750px;
+  }
+}

@@ -1,18 +1,22 @@
 .card {
   background-color: #fff;
-  width: 225px;
-  height: 310px;
-  padding: 20px;
+  width: 255px;
+  height: 340px;
+  padding-left: 40px;
+  padding-top: 20px;
   border-radius: 8px;
   text-decoration: none;
   box-shadow:  -10px 17px 17px rgba(10, 10, 10, 0.20);
 }
 
-.card h6 {
-  font-size: 12px;
+.card  a{
+  font-size: 13px;
   color: var(--text-darkColor);
   margin: 5px 0;
+  text-decoration: none;
+  font-weight: 600;
 }
+
 
 .card p {
   font-size: 11px;
@@ -23,7 +27,7 @@
   color: var(--text-darkColor);
   font-weight: 600;
   margin-top: 10px;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .card-img {
@@ -31,10 +35,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 165px;
+  width: 173px;
   height: 165px;
   border-radius: 8px;
   position: relative;
+  margin-bottom: 10px;
 }
 
 .card-img img {
@@ -53,4 +58,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 480px){
+  .card {
+    background-color: #fff;
+    width: 183px;
+    height: 319px;
+    padding: 10px;
+  
+  }
+  
+  
 }

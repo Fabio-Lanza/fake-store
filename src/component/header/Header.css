@@ -15,8 +15,20 @@
     text-decoration: none;
 }
 
+.header-container span{
+    background-color: red;
+    color: white; 
+    border-radius: 50%;
+    font-size: 13px;
+    padding: 2px 4px;
+    position: absolute;
+    right: 30px;
+    top: 10px;
+}
+
 .cart-item{
    color: var(--primary-color); 
-    font-size: 1.5rem;
+    font-size: 2.2rem;
+    position: relative;
 }
 

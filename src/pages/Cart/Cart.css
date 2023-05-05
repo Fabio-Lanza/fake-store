@@ -1,0 +1,97 @@
+.cart-container {
+  min-height: 100vh;
+}
+
+.cart-box {
+  width: 993px;
+  height: 783px;
+  background-color: #fff;
+  margin: 100px auto;
+  box-shadow: -10px 10px 19px rgba(10, 10, 10, 0.1);
+  position: relative;
+}
+
+.cart-box img {
+  width: 80px;
+  height: 105px;
+  margin: 0 10px;
+}
+
+.cart-box table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cart-box thead th {
+  padding: 16px 10px;
+  color: #979797;
+  font-size: 15px;
+  border-bottom: 2px solid #d9d9d9;
+}
+
+.cart-box table td {
+  border-bottom: 2px solid #d9d9d9;
+  padding: 15px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.cart-box table td svg {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.item {
+  display: flex;
+  gap: 20px;
+}
+
+.cart-box p {
+  text-align: end;
+  padding: 20px 40px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.cart-box button {
+  background-color: #ffd814;
+  font-size: 14px;
+  color: var(--text-darkColor);
+  font-weight: 700;
+  padding: 10px 20px;
+  border: none;
+  width: 158px;
+  cursor: pointer;
+  margin-left: 800px;
+  margin-top: 30px;
+}
+
+.modal-box {
+  width: 692px;
+  height: 536px;
+  text-align: center;
+}
+
+.modal-box .modal-content {
+  margin: 110px 79px;
+}
+.modal-box .modal-content p {
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+.modal-box svg {
+  font-size: 25px;
+  margin-left: 600px;
+  cursor: pointer;
+}
+
+.modal-box button {
+  width: 156px;
+  height: 41px;
+  background-color: #5264c3;
+  color: white;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+}

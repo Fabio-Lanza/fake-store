@@ -6,3 +6,21 @@
     color: #5264c3;
     cursor: pointer;
 }
+
+
+@media screen and (max-width: 850px){
+    .category-btn{
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+
+  @media screen and (max-width: 480px){
+    .category-btn{
+      width: 400px;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+  }
