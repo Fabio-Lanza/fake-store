@@ -6,17 +6,17 @@
   padding-top: 20px;
   border-radius: 8px;
   text-decoration: none;
-  box-shadow:  -10px 17px 17px rgba(10, 10, 10, 0.20);
+  box-shadow: -10px 17px 17px rgba(10, 10, 10, 0.2);
 }
 
-.card  a{
+.card a {
   font-size: 13px;
   color: var(--text-darkColor);
   margin: 5px 0;
   text-decoration: none;
   font-weight: 600;
+  overflow: hidden;
 }
-
 
 .card p {
   font-size: 11px;
@@ -61,16 +61,29 @@
   cursor: pointer;
 }
 
-
-
-@media screen and (max-width: 480px){
+@media screen and (max-width: 480px) {
   .card {
     background-color: #fff;
     width: 183px;
     height: 319px;
-    padding: 10px;
-  
+    padding-left: 15px;
   }
-  
-  
+
+  .card-img {
+    width: 153px;
+    height: 145px;
+  }
+
+  .card a {
+    font-size: 12px;
+  }
+
+  .card p {
+    font-size: 11px;
+    color: #949494;
+  }
+
+  .card .price {
+    font-size: 12px;
+  }
 }

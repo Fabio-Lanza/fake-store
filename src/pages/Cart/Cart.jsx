@@ -1,19 +1,24 @@
 import React from "react";
 import "./Cart.css";
 import axios from "axios";
-import { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useState, useEffect, useContext } from "react";
+import { Link } from "react-router-dom";
 import { BsTrash } from "react-icons/bs";
 import { AiOutlineClose } from "react-icons/ai";
-import { useContext } from "react";
 import { ShopContext } from "../../Context/ShopContext";
 import Modal from "react-modal";
 
 function Cart() {
-  const { cart, handleRemove } = useContext(ShopContext);
-
+  const { cart, setCart, handleRemove } = useContext(ShopContext);
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
+  useEffect(()=> {
+    const cartStored = localStorage.getItem('cartItems')
+    if(cartStored !== null){
+      setCart(JSON.parse(cartStored))
+    }
+  }, [])
+  
   const customStyles = {
     content: {
       top: "50%",
@@ -21,7 +26,7 @@ function Cart() {
       right: "auto",
       bottom: "auto",
       marginRight: "-50%",
-      transform: "translate(-50%, -50%)", 
+      transform: "translate(-50%, -50%)",
     },
   };
 
@@ -55,17 +60,13 @@ function Cart() {
             </tbody>
           ))}
         </table>
-        <p>Total $218</p>
+        <p>Total $0</p>
         <button onClick={() => setModalIsOpen(true)}>Checkout</button>
       </div>
 
-      <Modal
-        isOpen={modalIsOpen}
-        style={customStyles}
-        contentLabel="modal"
-      >
+      <Modal isOpen={modalIsOpen} style={customStyles} contentLabel="modal">
         <div className="modal-box">
-            <AiOutlineClose onClick={()=>setModalIsOpen(false)}/>
+          <AiOutlineClose onClick={() => setModalIsOpen(false)} />
           <div className="modal-content">
             <p>Your Order was successful!</p>
             <p>
