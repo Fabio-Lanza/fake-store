@@ -12,6 +12,7 @@ function Cart() {
   const { cart, setCart, handleRemove } = useContext(ShopContext);
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
+
   useEffect(()=> {
     const cartStored = localStorage.getItem('cartItems')
     if(cartStored !== null){

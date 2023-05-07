@@ -7,6 +7,13 @@ export default function ShopContextProvider({ children }) {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
 
+  
+  useEffect(() => {
+    const storedFav = localStorage.getItem("cartItems");
+    if (storedFav !== null) {
+      setCart(JSON.parse(storedFav));
+    }
+  }, []);
 
   useEffect(() => {
     axios.get("https://fakestoreapi.com/products").then((res) => {
@@ -15,9 +22,9 @@ export default function ShopContextProvider({ children }) {
   }, []);
 
   const addToCart = (item) => {
-   let newCart = [...cart, item]
+    let newCart = [...cart, item];
     setCart(newCart);
-    localStorage.setItem('cartItems', JSON.stringify(newCart))
+    localStorage.setItem("cartItems", JSON.stringify(newCart));
   };
 
   const handleRemove = (item) => {
