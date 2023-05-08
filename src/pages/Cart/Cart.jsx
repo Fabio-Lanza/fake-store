@@ -11,15 +11,28 @@ import Modal from "react-modal";
 function Cart() {
   const { cart, setCart, handleRemove } = useContext(ShopContext);
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [totalAmount, setTotalAmount] = useState(0);
 
+  const calcTotal = () => {
+    let initial = 0;
+    let amount = 1;
+    cart.map((item) => {
+      initial += amount * item.price;
+    });
+    setTotalAmount(initial);
+  };
 
-  useEffect(()=> {
-    const cartStored = localStorage.getItem('cartItems')
-    if(cartStored !== null){
-      setCart(JSON.parse(cartStored))
+  useEffect(() => {
+    calcTotal();
+  });
+
+  useEffect(() => {
+    const cartStored = localStorage.getItem("cartItems");
+    if (cartStored !== null) {
+      setCart(JSON.parse(cartStored));
     }
-  }, [])
-  
+  }, []);
+
   const customStyles = {
     content: {
       top: "50%",
@@ -61,7 +74,7 @@ function Cart() {
             </tbody>
           ))}
         </table>
-        <p>Total $0</p>
+        <p>Total ${totalAmount}</p>
         <button onClick={() => setModalIsOpen(true)}>Checkout</button>
       </div>
 

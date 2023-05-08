@@ -32,6 +32,8 @@ export default function ShopContextProvider({ children }) {
     setCart(newCart);
   };
 
+  console.log(cart)
+
   const value = {
     cart,
     setCart,
